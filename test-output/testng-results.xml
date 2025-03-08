@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-03-08T16:33:56 IST" name="Default suite" finished-at="2025-03-08T16:34:21 IST" duration-ms="25688">
+    <groups>
+      <group name="Smoke">
+        <method signature="EcommerceHybrid.FillForm(java.util.HashMap)[pri:0, instance:org.pankajShukla.EcommerceHybrid@7f3b84b8]" name="FillForm" class="org.pankajShukla.EcommerceHybrid"/>
+      </group> <!-- Smoke -->
+    </groups>
+    <test started-at="2025-03-08T16:33:56 IST" name="Default test" finished-at="2025-03-08T16:34:21 IST" duration-ms="25688">
+      <class name="org.pankajShukla.EcommerceHybrid">
+        <test-method is-config="true" signature="ConfigureAppium()[pri:0, instance:org.pankajShukla.EcommerceHybrid@7f3b84b8]" started-at="2025-03-08T16:33:56 IST" name="ConfigureAppium" finished-at="2025-03-08T16:34:01 IST" duration-ms="5252" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ConfigureAppium -->
+        <test-method signature="FillForm(java.util.HashMap)[pri:0, instance:org.pankajShukla.EcommerceHybrid@7f3b84b8]" started-at="2025-03-08T16:34:01 IST" name="FillForm" data-provider="getData" finished-at="2025-03-08T16:34:21 IST" duration-ms="20155" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{gender=Female, name=Pankaj Shukla, country=Argentina}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FillForm -->
+        <test-method is-config="true" signature="preSetup()[pri:0, instance:org.pankajShukla.EcommerceHybrid@7f3b84b8]" started-at="2025-03-08T16:34:01 IST" name="preSetup" finished-at="2025-03-08T16:34:01 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preSetup -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.pankajShukla.EcommerceHybrid@7f3b84b8]" started-at="2025-03-08T16:34:21 IST" name="tearDown" finished-at="2025-03-08T16:34:21 IST" duration-ms="165" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- org.pankajShukla.EcommerceHybrid -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

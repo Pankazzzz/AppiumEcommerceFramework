@@ -1,0 +1,17 @@
+<suite name="Suite">
+
+<listeners>
+<listener class-name="org.pankajShukla.TestUtils.Listeners"/>
+</listeners>
+
+  <listeners>
+<listener class-name="org.pankajShukla.TestUtils.Listeners"/>
+</listeners>
+
+  <test thread-count="5" name="End to end Framework Test">
+    <classes>
+      <class name="org.pankajShukla.EcommerceHybrid"/>     
+    </classes>
+  </test> <!-- Test -->
+  
+</suite> <!-- Suite -->

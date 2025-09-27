@@ -38,5 +38,138 @@ Designed with a scalable architecture and utility-first approach, this framework
 
 ---
 
-## 🧱 Project Structure
+## 🗂️ Project Structure
+
+```
+AppiumEcommerceFramework/
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   ├── base/
+│   │   │   │   └── BaseTest.java
+│   │   │   ├── pages/
+│   │   │   │   ├── LoginPage.java
+│   │   │   │   ├── HomePage.java
+│   │   │   │   ├── ProductPage.java
+│   │   │   │   ├── CartPage.java
+│   │   │   │   ├── CheckoutPage.java
+│   │   │   ├── utils/
+│   │   │   │   ├── DriverFactory.java
+│   │   │   │   ├── AppiumUtils.java
+│   │   │   │   ├── WaitUtils.java
+│   │   │   │   └── ConfigReader.java
+│   ├── test/
+│   │   ├── java/
+│   │   │   ├── tests/
+│   │   │   │   └── E2EEcommerceFlowTest.java
+├── resources/
+│   ├── config.properties
+│   └── testdata/
+│       └── user_credentials.xlsx
+├── test-output/
+├── pom.xml
+└── README.md
+```
+
+---
+
+## 🔧 Tools & Technologies
+
+| Tool / Library         | Purpose                              |
+|------------------------|---------------------------------------|
+| Appium                 | Mobile automation (Android/iOS)       |
+| Java                   | Programming language                  |
+| TestNG                 | Test orchestration                    |
+| Maven                  | Build and dependency management       |
+| Apache POI             | Read/write Excel (test data)          |
+| Log4j / SLF4J          | Logging (optional)                    |
+| BrowserStack/Sauce Labs| Cloud device testing (optional)       |
+
+---
+
+## 🛠️ Setup Instructions
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/appium-ecommerce-framework.git
+cd appium-ecommerce-framework
+```
+
+### 2. Install Dependencies
+
+```bash
+mvn clean install
+```
+
+### 3. Set Device and App Capabilities
+
+Edit the `config.properties` file under `resources/`:
+
+```properties
+platformName=Android
+platformVersion=13
+deviceName=emulator-5554
+appPackage=com.yourapp.package
+appActivity=com.yourapp.activity.MainActivity
+```
+
+Alternatively, update capabilities directly in `DriverFactory.java`.
+
+---
+
+### 4. Connect Android Emulator or Device
+
+Make sure your emulator or device is connected:
+
+```bash
+adb devices
+```
+
+---
+
+### 5. Run the Tests
+
+```bash
+mvn test
+```
+
+---
+
+## 📸 Sample Test Code (POM + Utility Based)
+
+```java
+@Test
+public void e2eProductCheckoutTest() {
+    LoginPage login = new LoginPage(driver);
+    HomePage home = new HomePage(driver);
+    ProductPage product = new ProductPage(driver);
+    CartPage cart = new CartPage(driver);
+    CheckoutPage checkout = new CheckoutPage(driver);
+
+    login.login("testuser", "password123");
+    home.selectCategory("Electronics");
+    home.selectProductByName("Headphones");
+    product.addToCart();
+    cart.proceedToCheckout();
+    checkout.fillShippingDetails();
+    checkout.placeOrder();
+
+    Assert.assertTrue(checkout.isOrderConfirmed());
+}
+```
+
+---
+
+## 📁 Test Data
+
+Test data (e.g., user credentials, product names) is stored in:
+
+```
+/resources/testdata/user_credentials.xlsx
+```
+
+You can extend this with:
+- 🧪 Dynamic test data using Java Faker
+- 🌐 Environment-specific configs (QA, UAT, Prod)
 

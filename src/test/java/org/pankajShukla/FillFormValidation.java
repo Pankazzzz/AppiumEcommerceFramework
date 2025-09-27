@@ -33,6 +33,9 @@ public class FillFormValidation extends AndroidBaseTest {
 		//driver.startActivity(activity);	
 		//((JavascriptExecutor) driver).executeScript("mobile: startActivity", ImmutableMap.of("intent","com.androidsample.generalstore/com.androidsample.generalstore.MainActivity"));
 		//You're getting a SecurityException: Permission Denial error because the app you're trying to launch (com.androidsample.generalstore) does not export its MainActivity, meaning it's not accessible from external sources.
+		
+		//setCapability("appPackage",)
+		//setCapability("appActivity",)
 	}
 	
 	@Test

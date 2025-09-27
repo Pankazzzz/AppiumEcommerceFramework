@@ -41,7 +41,9 @@ Designed with a scalable architecture and utility-first approach, this framework
 
 ## 🧱 Project Structure
 
+
 AppiumEcommerceFramework/
+
 ├── src/
 │ ├── main/
 │ │ ├── java/
@@ -70,9 +72,6 @@ AppiumEcommerceFramework/
 ├── pom.xml
 └── README.md
 
-yaml
-Copy code
-
 ---
 
 ## 🔧 Tools & Technologies
@@ -96,15 +95,14 @@ Copy code
 ```bash
 git clone https://github.com/your-username/appium-ecommerce-framework.git
 cd appium-ecommerce-framework
+
 2. Install dependencies
-bash
-Copy code
+```bash
 mvn clean install
+
+```bash
 3. Set device and app capabilities
 Edit config.properties:
-
-properties
-Copy code
 platformName=Android
 platformVersion=13
 deviceName=emulator-5554
@@ -114,11 +112,11 @@ Or update capabilities in DriverFactory.java.
 
 4. Connect Android Emulator or Device
 Make sure your emulator/device is running and detected:
-
-bash
+```bash
 adb devices
+
 5. Run the tests
-bash
+```bash
 mvn test
 
 📸 Sample Test Code (POM + Utility Based)

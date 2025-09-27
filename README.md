@@ -72,6 +72,34 @@ AppiumEcommerceFramework/
 ├── pom.xml
 └── README.md
 
+
+├── src/
+│ ├── main/
+│ │ ├── java/
+│ │ │ ├── base/
+│ │ │ │ └── BaseTest.java
+│ │ │ ├── pages/
+│ │ │ │ ├── LoginPage.java
+│ │ │ │ ├── HomePage.java
+│ │ │ │ ├── ProductPage.java
+│ │ │ │ ├── CartPage.java
+│ │ │ │ ├── CheckoutPage.java
+│ │ │ ├── utils/
+│ │ │ │ ├── DriverFactory.java
+│ │ │ │ ├── AppiumUtils.java
+│ │ │ │ ├── WaitUtils.java
+│ │ │ │ └── ConfigReader.java
+│ ├── test/
+│ │ ├── java/
+│ │ │ ├── tests/
+│ │ │ │ └── E2EEcommerceFlowTest.java
+├── resources/
+│ ├── config.properties
+│ ├── testdata/
+│ └── user_credentials.xlsx
+├── test-output/
+├── pom.xml
+└── README.md
 ---
 
 ## 🔧 Tools & Technologies
